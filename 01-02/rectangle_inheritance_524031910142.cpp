@@ -15,7 +15,7 @@ class Cuboid: public Rectangle {
 public:
     Cuboid(double l, double w, double h): Rectangle(l, w), height(h) {}
     Cuboid(const Rectangle &rec1, double h): Rectangle(rec1), height(h) {}
-    Cuboid(const Cuboid &cub1): Cuboid(Rectangle(cub1.length, cub1.width), cub1.height) {}
+    Cuboid(const Cuboid &cub1): Cuboid(cub1.length, cub1.width, cub1.height) {}
     double calculateV() { return calculateArea() * height; }
     double calculate_c_perimeter() { return 2 * calculate_r_perimeter() + 4 * height; }
     double calculateS() { return 2 * (calculateArea() + (length + width) * height); }
